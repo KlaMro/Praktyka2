@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Marketingowy</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>Kalkulator Agencji Marketingowej</h1>
+
+    <div class="calculator-section">
+        <h2>Propozycja 1: Kalkulator Budżetu i Zysku</h2>
+        <label for="budget">Określ swój miesięczny budżet na reklamę (PLN):</label>
+        <input type="range" id="budget" name="budget" min="1000" max="50000" value="5000" step="500">
+        <div class="output">
+            <span>Wybrany budżet: <span id="budgetValue">5000</span> PLN</span><br>
+            <span>Prowizja agencji (15%): <span id="commissionValue">750</span> PLN</span><br>
+            <span>Szacowany zwrot z inwestycji (ROI): <span id="roiValue">12500</span> PLN</span>
+        </div>
+    </div>
+
+    <div class="calculator-section">
+        <h2>Propozycja 2: Wybierz Swój Cel Biznesowy</h2>
+        <p>Zamiast wybierać konkretne usługi, powiedz nam, czego potrzebujesz:</p>
+        <div class="goal-buttons">
+            <button id="goal-more_calls">Chcę więcej telefonów</button>
+            <button id="goal-more_sales">Chcę zwiększyć sprzedaż</button>
+            <button id="goal-new_brand">Buduję nową markę</button>
+        </div>
+        <div class="output">
+            Rekomendowany pakiet: <span id="packageResult">...</span>
+        </div>
+    </div>
+
+    <div class="calculator-section">
+        <h2>Propozycja 3: Otrzymaj Wycenę na E-mail</h2>
+        <p>Podaj swój adres e-mail, aby otrzymać natychmiastowy, spersonalizowany raport z wyceną w formacie PDF.</p>
+        <form id="email-form">
+            <input type="email" id="email-input" placeholder="Wpisz swój adres e-mail" required>
+            <button type="submit" id="email-submit">Wygeneruj i wyślij raport</button>
+        </form>
+        <div class="loader" id="loader"></div>
+        <div class="output">
+            <span id="reportStatus">...</span>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
